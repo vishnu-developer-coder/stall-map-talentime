@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>CUSAT SMS — Sponsor Stall Map (3D)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">CUSAT School of Management Studies</div>
+  <h1>Sponsor stall map</h1>
+  <p class="sub">A scaled 3D model of the stretch from CUSAT's Main Block to the SMS front, with buildings and roads placed from their real Google Maps positions: the Amenity Centre food court, the Hindi Dept junction, and the Open Air Auditorium along University Road. Jump to a location below, drag to orbit, scroll or pinch to zoom, and tap any stall number for its details.</p>
+
+  <div class="layout">
+    <div class="stage">
+      <div class="tabs">
+        <button class="tab active" data-tab="3d">3D map</button>
+        <button class="tab" data-tab="sv">Street View</button>
+      </div>
+      <div id="view3d" style="margin-top:10px;"><div id="labels"></div></div>
+      <div id="viewSV"></div>
+      <div class="hint" id="hint3d">Drag to orbit · scroll to zoom · tap a pin</div>
+    </div>
+    <aside class="side">
+      <h2>Selected stall</h2>
+      <div class="detail" id="detail"><span class="name">Tap a numbered pin</span>Sponsor details appear here.</div>
+      <h2 style="margin-top:16px;">Jump to zone</h2>
+      <div class="zones">
+        <button class="zbtn active" data-zone="0">Main Block</button>
+        <button class="zbtn" data-zone="1">Food Court</button>
+        <button class="zbtn" data-zone="2">Hindi Dept Junction</button>
+        <button class="zbtn" data-zone="3">SMS / Auditorium</button>
+      </div>
+      <h2 style="margin-top:16px;">Pin categories</h2>
+      <div class="legend" id="legend"></div>
+    </aside>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
